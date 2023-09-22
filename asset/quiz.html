@@ -4,14 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0 auto;
+        }
+        #main {
+            width: 800px;
+            height: 400px;
+            background-color: pink;
+            text-align: center;
+            position: relative;
+        }
+        .talk_human {
+            position: absolute;
+            bottom: 100px;
+            width: 100px;
+            height: 50px;
+            background-color: #000;
+            left: 30px;
+            color: #fff;
+            z-index: 1;
+        }
+        .text_box {
+            position: absolute;
+            left: 50px;
+            bottom: 10px;
+            width: 700px;
+            height: 120px;
+            background-color: #fff;
+        }
+        
+    </style>
 </head>
 <body>
+    <div id="wrap">
+        <main id="main">
+            <div class="talk_human"></div>
+            <div class="text_box"></div>
+        </main>
+    </div>
+    <script src="inhae.json" type="text/javascript"></script>
     <script>
+        
+        // 선택자
+        const textWrap = document.querySelector(".main");
+        const talkHuman = textWrap.querySelector(".talk_human");
+        const textTest = textWrap.querySelector(".text_box");
 
-        const human = [
-        
-        
+        // 변수 설정
+        let textIndex = 0;     // 현재 대화하고 있는 문장 인덱스
+        let textInfo = [];      // 문장 정보들 
+
+        // 인물 설정 
+
+        const Human = [
+            {
+                name: "강인혜",
+                age: "25",
+                job: "student",
+            },    
         ]
+        
+        // 대화 가져오기 
+        const fetchQuiz = () => {
+        }
+        
+
 
     </script>
 </body>
