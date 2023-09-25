@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인혜</title>
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+    <div id="talk_wrap">
+
+    </div>
+
+    <script>
+        // 선택자
+        const talkWrap = document.querySelector("#talk_wrap");
+
+        // 변수 선언
+        let textIndex = 0; // 현재 대화하고 있는 문장 인덱스
+        let textInfo = []; // 문장 정보들
+        let inheaLove = 0; // 인혜의 호감도
+
+        // 인물 선언
+        const Human = {
+            inhae: {
+                name: "강인혜",
+                age: "25",
+                job: "student",
+            },
+        };
+
+        // 선택한 답변 저장
+        let selectedAnswers = [];
+
+        // 데이터 가져오기 (인혜 json 파일 가져오는 것)
+        fetch('../json/inhae.json')
+            .then((response) => response.json())
+            .then((data) => {
+                textInfo = data.map((data, index) => {
+                    const textInfo = {
+                        runText: data.runText,
+                        Question: data.Question,
+                        Choice: data.Choice,
+                        Answer: data.Answer,
+                        choiceGood: data.choiceGood,
+                        choiceBad: data.choiceBad,
+                    };
+                    return textInfo;
+                });
+                updateText(textIndex); // 데이터 로딩이 완료된 후에 함수 호출
+            });
+
+        let currentDialog = "intro";
+
+        const updateText = (index) => {
+
+            const data = textInfo[index]; // 현재 인덱스의 대화 정보 가져오기
+
+            // 대화 출력
+
+            // 1) 인트로 부분 
+
+            if (currentDialog == "intro") {
+                const textIntro = [];
+                textIntro.push(`
+                    <div id="intro">
+                        <div class="intro_box">
+                            <p>${data.runText[0]}</p>
+                            <p>${data.runText[1]}</p>
+                            <p>${data.runText[2]}</p>
+                            <p>${data.runText[3]}</p>
+                            <p>${data.runText[4]}</p>
+                            <p>${data.runText[5]}</p>
+                            <button class="next_btn">Next</button>
+                        </div>
+                    </div>
+                `)
+                talkWrap.innerHTML = textIntro.join("");
+            }
+
+            else if (currentDialog === "dialog") {
+                // 다이어로그 표시
+                const textDialog = [];
+                textDialog.push(`
+                    <div id="dialog">
+                        <div class="character"></div>
+                        <div class="dialog_box">
+                            <div class="tag">강인혜</div>
+                            <p></p>
+                            <button class="next_btn">Next</button>
+                        </div>
+                    </div>
+                `);
+                talkWrap.innerHTML = textDialog.join("");
+            }
+
+            else if (currentDialog === "choice") {
+                // 초이스 표시
+                const textChoice = [];
+                textChoice.push(`
+                    <div id="choice">
+                        <div class="character"><img src="../assets/img/inhea_profile.png" alt=""></div>
+                        <div class="choice_box">
+                            <p>${data.Question}</p>
+                            <div class="choice_btn">
+                                <button class="choice_A">${data.Choice[0]}</button>
+                                <button class="choice_B">${data.Choice[1]}</button>
+                            </div>
+                            <div class="talk__choiceGood none">${data.choiceGood}</div>
+                            <div class="talk__choiceBad none">${data.choiceBad}</div>
+                        </div>
+                    </div>
+                `);
+                talkWrap.innerHTML = textChoice.join("");
+            };
+            const nextBtn = document.querySelector(".next_btn");
+            nextBtn.addEventListener("click", () => {
+                if (currentDialog === "intro") {
+                    currentDialog = "dialog";
+                } else if (currentDialog === "dialog") {
+                    currentDialog = "choice";
+                } else {
+                }
+
+                textIndex++; // 다음 대화로 이동
+                updateText(textIndex); // 새로운 대화 상자 표시
+            });
+        };
+
+        updateText(textIndex);
+    </script>
+</body>
+
+</html>
