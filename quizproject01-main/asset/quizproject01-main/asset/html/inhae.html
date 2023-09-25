@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <title>2024 연애 시뮬레이션</title>
+</head>
+
+<body>
+    <div class="inner__wrap">
+
+    </div>
+
+    <div id="choice">
+        <div class="character">
+            <img src="../assets/img/inhea_profile.png" alt="">
+        </div>
+        <div class="choice_box">
+            <p>
+                괜찮으면 같이 쇼핑하러 갈래?
+            </p>
+            <div class="choice_btn">
+                <button class="choice_A">A. 내가 너랑 왜?</button>
+                <button class="choice_B">B. 그래, 같이 가자!</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 선택자
+        const introWrap = document.querySelector(".inner__wrap");
+
+        // 변수 설정
+        let quizInfo = []; // 모든 퀴즈 정보
+        let currentIndex = 0; // 현재 퀴즈 인덱스
+        let currentRunTextIndex = 0; // 현재 runText 배열 요소 인덱스
+        let isRunTextMode = true; // 현재 모드가 runText 모드인지 나타내는 변수
+
+        // 문제 가져오기
+        const fetchQuiz = () => {
+            fetch("http://uzin4916.dothome.co.kr/quiz_team/assets/json/inhae.json")
+                .then((res) => res.json())
+                .then((items) => {
+                    quizInfo = items.map((item, index) => {
+                        const formattedQuiz = {
+                            runText: item.runText,
+                            Question: item.Question,
+                            choiceBad: item.choiceBad,
+                            choiceGood: item.choiceGood,
+                        };
+
+                        // 보기 가져오기
+                        const choices = [item.Choice];
+
+                        formattedQuiz.infoChoice = choices;
+                        return formattedQuiz;
+                    });
+
+                    console.log(quizInfo);
+                    updataQuiz();
+                });
+        };
+
+        // intro_box 클릭 이벤트 핸들러
+        const introBoxClickHandler = () => {
+            if (isRunTextMode) {
+                currentRunTextIndex++; // 다음 runText 배열 요소 인덱스로 이동
+
+                // 만약 현재 배열 요소를 모두 표시했다면 Question 모드로 전환
+                if (currentRunTextIndex >= quizInfo[currentIndex].runText.length) {
+                    currentRunTextIndex = 0; // 배열 요소 인덱스 초기화
+                    isRunTextMode = false; // Question 모드로 전환
+                }
+            } else {
+                currentIndex++; // 다음 퀴즈로 이동
+
+                // 만약 마지막 퀴즈를 넘어가면 초기화
+                if (currentIndex >= quizInfo.length) {
+                    currentIndex = 0;
+                }
+
+                isRunTextMode = true; // runText 모드로 전환
+            }
+
+            // 퀴즈 업데이트
+            updataQuiz();
+        };
+
+        // intro_box 클릭 이벤트를 등록
+        introWrap.addEventListener("click", introBoxClickHandler);
+
+        // 문제 출력
+        const updataQuiz = () => {
+            const quiz = quizInfo[currentIndex];
+            if (quiz) {
+                let content = '';
+                if (isRunTextMode) {
+                    // runText 모드
+                    const runTextItem = quiz.runText[currentRunTextIndex];
+                    content = `
+                        <div id="intro" class="intro_wrap">
+                            <div class="intro_box">
+                                <p>${runTextItem}</p>
+                                <button class="next_btn"><img src="../assets/img/next.png" alt=""></button>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    // Question 모드
+                    let nextBtn = document.querySelector(".next_btn");
+                    content = `
+                        <div id="dialog">
+                            <div class="character">
+                                <img src="../assets/img/inhea_profile.png" alt="">
+                            </div>
+                            <div class="dialog_box">
+                                <div class="tag">인혜</div>
+                                <p>${quiz.Question}</p>
+                                <button class="next_btn"><img src="../assets/img/next.png" alt=""></button>
+                            </div>    
+                        </div>
+                    `;
+                }
+            }
+            else if (currentDialog === "choice") {
+                // 초이스 표시
+                const textChoice = [];
+                textChoice.push(`
+                    <div id="choice">
+                        <div class="character"><img src="../assets/img/inhea_profile.png" alt=""></div>
+                        <div class="choice_box">
+                            <p>${data.Question}</p>
+                            <div class="choice_btn">
+                                <button class="choice_A">${data.Choice[0]}</button>
+                                <button class="choice_B">${data.Choice[1]}</button>
+                            </div>
+                            <div class="talk__choiceGood none">${data.choiceGood}</div>
+                            <div class="talk__choiceBad none">${data.choiceBad}</div>
+                        </div>
+                    </div>
+                `);
+                talkWrap.innerHTML = textChoice.join("");
+            };
+
+            const quizHTML = `
+            ${content}
+            `;
+            introWrap.innerHTML = quizHTML;
+        }
+
+        // 페이지가 로드된 후 실행
+        document.addEventListener("DOMContentLoaded", () => {
+            fetchQuiz();
+        });
+    </script>
+</body>
+
+</html>
