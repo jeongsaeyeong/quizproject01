@@ -62,7 +62,7 @@
         "choiceGood" : "강인혜가 그 말을 듣자 얼굴을 붉힌다. 싫어서 그런가 자세히 들여다보니, 그건 아닌 모양이다. 나랑 시선을 못 마주치는 걸 보니 말이다.",
         "choiceBad" : "강인혜가 짜게 식은 표정으로 나를 쳐다본다. 할 말이 그것뿐이냐는 듯 말이다. 이내 강인혜는 새침하게 고개를 돌려버렸다.",
         "feel": "../assets/img/inhyeB.png ",
-        "backgrond" : "../assets/background/park.jpg"
+        "backgrond" : "../assets/background/park1.jpg"
     },
     {
         "runText" : [
