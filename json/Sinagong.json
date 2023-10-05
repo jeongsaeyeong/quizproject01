@@ -1,0 +1,327 @@
+[
+    {
+        "time": "기능사 시나공",
+        "question": "키보드로 명ㄹ영어를 직접 입력하지 않고, 아이콘이나 메뉴를 마우스로 선택하여 모든 작업을 수행하는 사용자 작업 환경을 사용하는 최신 윈도우의 특징은 무엇인가요?",
+        "correct_answer": "GUI 사용"
+    },
+    {
+        "time": "기능사 시나공",
+        "question": "운영체제가 각 작업의 CPU 이용 시간을 제어하여 응용 프로그램 실행 중 문제가 발생하면 해당 프로그램을 강제로 종료시키고, 모든 시스템 자원ㅇ르 반환하는 멀티 태스킹 운영방식을 무엇이라 하나요?",
+        "correct_answer": "선점형 멀티태스킹"
+    },
+    {
+        "time": "기능사 시나공",
+        "question": "이전 버전과의 호환을 위해 부붅거으로 16비트 데이터 처리를 하나 대부분 32비트나 64비트 데이터 처리를 하므로 더 많은 양의 데이터를 빠르게 처리할 수 있는 윈도우의 특징은 무엇인가요?",
+        "correct_answer": "32비트 또는 64비트 데이터 처리"
+    },
+    {
+        "time": "기능사 시나공",
+        "question": "파일 시스템이란 보조기억 장치에 저장되는 파일을 수정, 삭제, 추가, 감색하는 관리 시스템을 말합니다. 이를 일컫어 무엇이라 할까요?",
+        "correct_answer": "FAT32 파일 시스템"
+    },
+    {
+        "time": "기능사 시나공",
+        "question": "컴퓨터 시스템에 새로운 하드웨어를 장착하고 시스템을 가동시키면 자동으로 하드웨어를 인식하고 실행하는 기능을 무엇이라 하나요?",
+        "question_desc": "운영체제가 주변기기를 자동으로 인색해 시스템 환경을 사용자가 직접 설정할 필요가 없습니다.",
+        "correct_answer": "PnP"
+    },
+    {
+        "time": "기능사 시나공",
+        "question": "다른 여러 응용 프로그램에서 작성된 문자나 그림 등의 개체를 현재 작성중인 문서에 자유롭게 연결하거나 삽입하여 편집할 수 있게 하는 기능을 무엇이라 하나요?",
+        "correct_answer": "OLE"
+    },
+    {
+        "time": "기능사 시나공",
+        "question": "실행중인 창이나 앱을 종료하는 단축키로 실행중인 앱이 없으면 윈도우 종료 창을 나타내는 단축키는 무엇인가요?",
+        "question_desc": "Alt + (   ) ",
+        "correct_answer": "F4"
+    },
+    {
+        "time": "기능사 시나공",
+        "question": "휴지통을 거치지 않고 폴더나 파일을 바로 삭제하는 단축키는 무엇인가요?",
+        "question_desc": "(   ) + Delete",
+        "correct_answer": "Shift"
+    },
+    {
+        "time": "기능사 시나공",
+        "question": "",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    },
+    {
+        "time": "기능사 시나공",
+        "question": " ",
+        "question_desc": " ",
+        "correct_answer": " "
+    }
+]
